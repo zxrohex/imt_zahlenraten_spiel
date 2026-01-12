@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Win98 MS Sans Serif";
+  src: url("./fonts/MS Sans Serif.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Win98 MS Sans Serif";
+  src: url("./fonts/MS Sans Serif Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Win98 MS Sans Serif";
+  -webkit-font-smoothing: none;
+}
+
+html, body, main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+}
+
+p, span, button {
+  font-size: 11px;
+}
+
+button {
+  background-color: rgb(192, 192, 192);
+  border-top: 1px groove rgb(255, 255, 255);
+  border-left: 1px groove rgb(255, 255, 255);
+  border-bottom: 2px ridge rgb(128, 128, 128);
+  border-right: 2px ridge rgb(128, 128, 128);
+}
+
+div.desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 128, 128);
+  overflow: hidden;
+}
+
+div.window {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  min-width: 400px;
+  min-height: 300px;
+  padding: 1px;
+  background-color: rgb(192, 192, 192);
+  border-top: 2px groove rgb(255, 255, 255);
+  border-left: 2px groove rgb(255, 255, 255);
+  border-bottom: 2px ridge rgb(128, 128, 128);
+  border-right: 2px ridge rgb(128, 128, 128);
+}
+div.window div.window-titlebar {
+  position: relative;
+  width: 100%;
+  height: 19px;
+  padding: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgb(0, 0, 128);
+  color: white;
+}
+div.window div.window-titlebar div.window-titlebar-content {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.window div.window-titlebar div.window-titlebar-content:first-of-type {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+div.window div.window-titlebar div.window-titlebar-content:last-of-type {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+div.window div.window-titlebar div.window-titlebar-content:last-of-type button.titlebar-control {
+  width: 17px;
+  height: 15px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.window div.window-titlebar div.window-titlebar-content:last-of-type button.titlebar-control h6 {
+  font-size: 10px;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+div.window div.window-menubar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  padding: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(192, 192, 192);
+}
+div.window div.window-menubar div.menubar-item {
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+div.window div.window-menubar div.menubar-item:hover > div.menubar-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.window div.window-menubar div.menubar-item:hover > div.menubar-item-button {
+  background-color: rgb(0, 0, 128);
+  color: white;
+  cursor: default;
+}
+div.window div.window-menubar div.menubar-item div.menubar-item-button {
+  height: 100%;
+  padding: 0px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.window div.window-menubar div.menubar-item div.menubar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background-color: rgb(192, 192, 192);
+  border: 2px groove rgb(255, 255, 255);
+  border-bottom: 2px ridge rgb(128, 128, 128);
+  border-right: 2px ridge rgb(128, 128, 128);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+div.window div.window-menubar div.menubar-item div.menubar-dropdown div.dropdown-item {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0px 10px;
+}
+div.window div.window-menubar div.menubar-item div.menubar-dropdown div.dropdown-item span {
+  margin: 0px;
+}
+div.window div.window-menubar div.menubar-item div.menubar-dropdown div.dropdown-item:hover {
+  background-color: rgb(0, 0, 128);
+  color: white;
+  cursor: default;
+}
+div.window div.window-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(192, 192, 192);
+}
