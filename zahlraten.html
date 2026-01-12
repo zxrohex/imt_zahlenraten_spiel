@@ -16,7 +16,7 @@
 			while (guessedNumber !== numberToGuess) {
 				guessedNumber = prompt("Nummer eingeben: ");
 
-				if (guessedNumber == "") {
+				if (guessedNumber == "" || guessedNumber == null) {
 					alert("Spiel beendet.");
 
 					break;
