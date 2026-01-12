@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="title" content="Zahlenraten-Spiel">
+		<meta name="description" content="Ein einfaches Zahlenraten Spiel in JavaScript">
+		<meta name="keywords" content="Zahlenraten, Spiel, JavaScript, HTML">
+		<meta name="author" content="Sasha Kruse">
+
+		<script>
+			var numberToGuess = Math.floor(Math.random() * 100) + 1;
+
+			var guessedNumber;
+
+			while (guessedNumber !== numberToGuess) {
+				guessedNumber = prompt("Nummer eingeben: ");
+
+				if (guessedNumber == "") {
+					alert("Spiel beendet.");
+
+					break;
+				}
+
+				if (guessedNumber == numberToGuess) {
+					alert("Richtig! Du hast die Zahl erraten.");
+				} else if (guessedNumber < numberToGuess) {
+					alert("Zu niedrig! Versuch es nochmal.");
+				} else if (guessedNumber > numberToGuess) {
+					alert("Zu hoch! Versuch es nochmal.");
+				}
+			}
+
+		</script>
+
+		<title>Zahlenraten-Spiel</title>
+	</head>
+
+	<body>
+
+	</body>
+</html>
