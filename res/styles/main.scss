@@ -57,8 +57,10 @@ div.desktop {
 div.window {
 	position: absolute;
 	
-	top: 200px;
-	left: 200px;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
 	
 	min-width: 400px;
 	min-height: 300px;
@@ -71,6 +73,8 @@ div.window {
 	border-left: 2px groove rgb(255, 255, 255);
 	border-bottom: 2px ridge rgb(128, 128, 128);
 	border-right: 2px ridge rgb(128, 128, 128);
+
+
 	
 	div.window-titlebar {
 		position: relative;
@@ -140,6 +144,8 @@ div.window {
 
 		background-color: rgb(192, 192, 192);
 
+		border-bottom: 2px groove rgb(230, 230, 230);
+
 		div.menubar-item {
 			position: relative;
 
@@ -161,7 +167,7 @@ div.window {
 			div.menubar-item-button {
 				height: 100%;
 
-				padding: 0px 5px;
+				padding: 2px 6px;
 
 				display: flex;
 				flex-direction: row;
@@ -187,6 +193,8 @@ div.window {
 
 				display: none;
 				flex-direction: column;
+
+				z-index: 100;
 
 				div.dropdown-item {
 					width: 100%;
@@ -218,6 +226,8 @@ div.window {
 
 		width: 100%;
 		height: calc(100%);
+
+		padding: 5px;
 
 		background-color: rgb(192, 192, 192);
 
