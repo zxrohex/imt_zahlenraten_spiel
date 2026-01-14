@@ -17,6 +17,11 @@
 	-webkit-font-smoothing: none;
 }
 
+:root {
+	--mouse-x: 0px;
+	--mouse-y: 0px;
+}
+
 html, body, main {
 	position: relative;
 
@@ -35,12 +40,23 @@ p, span, button {
 }
 
 button {
+	min-width: 75px;
+
+	padding: 4px 0px;
+
 	background-color: rgb(192, 192, 192);
 
 	border-top: 1px groove rgb(255, 255, 255);
 	border-left: 1px groove rgb(255, 255, 255);
 	border-bottom: 2px ridge rgb(128, 128, 128);
 	border-right: 2px ridge rgb(128, 128, 128);
+
+	outline: none;
+
+	&:active {
+		border: 1px solid rgb(140, 140, 140);
+		outline: 1px solid black;
+	}
 }
 
 div.desktop {
@@ -54,13 +70,15 @@ div.desktop {
 	overflow: hidden;
 }
 
+.draggable {
+
+}
+
 div.window {
 	position: absolute;
 	
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
+	top: 200px;
+	left: 200px;
 	
 	min-width: 400px;
 	min-height: 300px;
@@ -110,6 +128,8 @@ div.window {
 				justify-content: flex-end;
 
 				button.titlebar-control {
+					min-width: 0px;
+
 					width: 17px;
 					height: 15px;
 
